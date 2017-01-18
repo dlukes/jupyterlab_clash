@@ -1,0 +1,3 @@
+graft jupyterlab_clash/static
+graft src
+include package.json
