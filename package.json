@@ -18,10 +18,10 @@
     "watch": "watch 'npm run build' src --wait 5 --ignoreDotFiles"
   },
   "dependencies": {
-    "jupyterlab": "^0.11.2"
+    "jupyterlab": "*"
   },
   "devDependencies": {
-    "@jupyterlab/extension-builder": "^0.10.0",
+    "@jupyterlab/extension-builder": "*",
     "fs-extra": "^0.30.0",
     "rimraf": "^2.5.4",
     "typescript": "^2.0.3",
