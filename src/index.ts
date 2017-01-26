@@ -33,7 +33,8 @@ export class ClashModel extends VDomModel implements IClash {
   }
 }
 
-// NOTE: take inspiration from landing/widget.ts on how to implement VDomWidgets
+// NOTE: take inspiration from landing/widget.ts on how to implement VDomWidgets. See also
+// <https://jupyterlab-tutorial.readthedocs.io/en/latest/virtualdom.html>.
 export class ClashWidget extends VDomWidget<ClashModel> {
   public model: ClashModel
 
