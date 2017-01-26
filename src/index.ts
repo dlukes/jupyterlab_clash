@@ -46,6 +46,10 @@ export class ClashWidget extends Widget {
 
   private _render() {
     this.node.innerHTML = `<h3>Corpus Linguistics Advanced Shell</h3>
-      <p>Hello, world of corpus linguistics, and prepare to be amazed!</p>`
+      <p>Hello, world of corpus linguistics, and prepare to be amazed!</p>
+      <form>
+        Query: <input type="text" name="query">
+        <inpyt type="submit" value="Search">
+      </form>`
   }
 }
