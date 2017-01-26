@@ -1,7 +1,6 @@
 # jupyterlab_clash
 
-The Corpus Linguistics Advanced Shell.
-
+JupyterLab extension implementing the Corpus Linguistics Advanced Shell frontend.
 
 ## Prerequisites
 
@@ -33,4 +32,3 @@ To rebuild the extension bundle:
 ```bash
 npm run build
 ```
-
