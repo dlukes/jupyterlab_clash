@@ -13,3 +13,13 @@ It might seem easier to just depend on `"jupyterlab": "*"` in jupyterlab_clash,
 but it's nice to be warned about incompatibilities when you mess up one of the
 jupyterlab update steps and end up trying to install the extension against an
 older version of jupyterlab.
+
+# Clash GUI
+
+Currently, there's only one ClashWidget object which is hidden on close and can
+be restored via the launcher or the command palette. This object should be
+connected to a python kernel which will execute the user's actions (which will
+also be globally unique).
+
+In the future though, it may make sense to use a ClashWidgetFactory to allow
+users to create multiple corpus exploration interfaces.
