@@ -41,15 +41,17 @@ export class ClashWidget extends Widget {
 
   // TODO: import Message and specify type of msg
   onBeforeDetach(msg: any) {
-    delete this.node
+    // delete this.node
   }
 
   private _render() {
-    this.node.innerHTML = `<h3>Corpus Linguistics Advanced Shell</h3>
-      <p>Hello, world of corpus linguistics, and prepare to be amazed!</p>
-      <form>
-        Query: <input type="text" name="query">
-        <input type="submit" value="Search">
-      </form>`
+    if (!this.node.innerHTML) {
+      this.node.innerHTML = `<h3>Corpus Linguistics Advanced Shell</h3>
+        <p>Hello, world of corpus linguistics, and prepare to be amazed!</p>
+        <form>
+          Query: <input type="text" name="query">
+          <input type="submit" value="Search">
+        </form>`
+    }
   }
 }
