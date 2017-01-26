@@ -49,7 +49,7 @@ export class ClashWidget extends Widget {
       <p>Hello, world of corpus linguistics, and prepare to be amazed!</p>
       <form>
         Query: <input type="text" name="query">
-        <inpyt type="submit" value="Search">
+        <input type="submit" value="Search">
       </form>`
   }
 }
