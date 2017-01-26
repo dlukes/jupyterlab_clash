@@ -22,7 +22,7 @@
     "watch": "watch 'npm run build' src --wait 5 --ignoreDotFiles"
   },
   "dependencies": {
-    "jupyterlab": "*"
+    "jupyterlab": "^0.14.0"
   },
   "devDependencies": {
     "@jupyterlab/extension-builder": "*",
