@@ -1,6 +1,8 @@
-import { VDomModel } from "jupyterlab/lib/common/vdom"
+import { Message } from "phosphor/lib/core/messaging"
 import { Widget } from "phosphor/lib/ui/widget"
 import { Token } from "phosphor/lib/core/token"
+
+import { VDomModel } from "jupyterlab/lib/common/vdom"
 
 const LANDSCAPE_ICON_CLASS = "jp-MainAreaLandscapeIcon"
 export const CLASH_ICON_CLASS = "cl-ImageClash"
@@ -19,6 +21,7 @@ const IClash = new Token<IClash>("cz.korpus.jupyter.extensions.clash")
 export
 class ClashModel extends VDomModel implements IClash { }
 
+// NOTE: take inspiration from landing/widget.ts on how to implement this as a VDomWidget
 export class ClashWidget extends Widget {
   model: ClashModel
 
@@ -34,14 +37,17 @@ export class ClashWidget extends Widget {
     this.title.icon = `${LANDSCAPE_ICON_CLASS} ${CLASH_ICON_CLASS}`;
   }
 
-  // TODO: import Message and specify type of msg
-  onAfterAttach(msg: any) {
+  protected onAfterAttach(msg: Message) {
     this._render()
   }
 
-  // TODO: import Message and specify type of msg
-  onBeforeDetach(msg: any) {
+  protected onBeforeDetach(msg: Message) {
     // delete this.node
+  }
+
+  protected onActivateRequest(msg: Message): void {
+    this.node.tabIndex = -1
+    this.node.focus()
   }
 
   private _render() {
