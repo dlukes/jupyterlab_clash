@@ -2,6 +2,14 @@ import { VDomModel } from "jupyterlab/lib/common/vdom"
 import { Widget } from "phosphor/lib/ui/widget"
 import { Token } from "phosphor/lib/core/token"
 
+const LANDSCAPE_ICON_CLASS = "jp-MainAreaLandscapeIcon"
+export const CLASH_ICON_CLASS = "cl-ImageClash"
+
+export
+const cmdIds = {
+  showClash: "clash:show-clash"
+}
+
 export
 interface IClash { }
 
@@ -23,6 +31,7 @@ export class ClashWidget extends Widget {
     this.id = "jupyterlab_clash_unique_id"
     this.title.label = "Clash"
     this.title.closable = true
+    this.title.icon = `${LANDSCAPE_ICON_CLASS} ${CLASH_ICON_CLASS}`;
   }
 
   // TODO: import Message and specify type of msg
